@@ -3,17 +3,14 @@ package main
 import (
 	"flag"
 	"log"
-
-	"github.com/BurntSushi/toml"
-	"github.com/Gugush284/"
 )
 
 func main() {
 	flag.Parse()
 
-	config := apiserver.NewConfig() 
+	config := server.NewConfig()
 
-	if err := apiserver.Start(config); err != nil {
+	if err := server.Start(config); err != nil {
 		log.Fatal(err)
 	}
 }
