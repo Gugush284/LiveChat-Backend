@@ -12,13 +12,13 @@ type server struct {
 	Logger *logrus.Logger
 }
 
-func NewServer() *server {
+func NewServer(config *jsonConfig) *server {
 	s := &server{
 		router: mux.NewRouter(),
 		Logger: logrus.New(),
 	}
 
-	s.configureRouter()
+	s.configureRouter(config)
 
 	return s
 }
@@ -28,8 +28,8 @@ func (s *server) ServeHTTP(w http.ResponseWriter, r *http.Request) {
 }
 
 // Configuration of router ...
-func (s *server) configureRouter() {
-	s.router.HandleFunc("/getjson", s.Getjson()).Methods("GET")
+func (s *server) configureRouter(config *jsonConfig) {
+	s.router.HandleFunc("/getjson", s.Getjson(config)).Methods("GET")
 }
 
 func (s *server) configureLogger(config *jsonConfig) error {
@@ -45,7 +45,7 @@ func (s *server) configureLogger(config *jsonConfig) error {
 
 func Start(config *jsonConfig) error {
 
-	srv := NewServer()
+	srv := NewServer(config)
 
 	if err := srv.configureLogger(config); err != nil {
 		return err
