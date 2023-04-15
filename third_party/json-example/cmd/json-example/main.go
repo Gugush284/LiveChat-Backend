@@ -6,6 +6,7 @@ import (
 )
 
 func main() {
+
 	config := jsonServer.NewConfig()
 
 	if err := jsonServer.Start(config); err != nil {

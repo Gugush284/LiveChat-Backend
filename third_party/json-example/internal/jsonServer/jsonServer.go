@@ -29,6 +29,7 @@ func (s *server) ServeHTTP(w http.ResponseWriter, r *http.Request) {
 
 // Configuration of router ...
 func (s *server) configureRouter() {
+	s.router.HandleFunc("/getjson", s.Getjson()).Methods("GET")
 }
 
 func (s *server) configureLogger(config *jsonConfig) error {
