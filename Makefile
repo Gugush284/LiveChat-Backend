@@ -29,5 +29,14 @@ build_run_json:
 	go build -v ./third_party/json-example/cmd/json-example
 	./json-example.exe
 
+.PHONY: runjson_mac
+runjson:
+	./json-example.cmd
+
+
+.PHONY: build_run_json_mac
+build_run_json:
+	go build -v ./third_party/json-example/cmd/json-example
+	./json-example.cmd
 
 .DEFAULT_GOAL := build_run_server
