@@ -1,0 +1,22 @@
+{
+  "name": "livechat-backend",
+  "version": "1.0.0",
+  "description": "app for getting messages from twitch to livechat app",
+  "main": "index.js",
+  "directories": {
+    "doc": "docs"
+  },
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+ssh://git@github.com/Gugush284/LiveChat-Backend.git"
+  },
+  "author": "Guguch",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/Gugush284/LiveChat-Backend/issues"
+  },
+  "homepage": "https://github.com/Gugush284/LiveChat-Backend#readme"
+}
