@@ -1,1 +1,3 @@
-To start json example server see third_party/json-example/docs/manual.md
+To start server:
+    npm install fs toml tmi.js express
+    node .
