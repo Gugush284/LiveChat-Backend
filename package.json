@@ -2,7 +2,7 @@
   "name": "livechat-backend",
   "version": "1.0.0",
   "description": "app for getting messages from twitch to livechat app",
-  "main": "index.js",
+  "main": "cmd/chatbot.js",
   "directories": {
     "doc": "docs"
   },
@@ -20,6 +20,8 @@
   },
   "homepage": "https://github.com/Gugush284/LiveChat-Backend#readme",
   "dependencies": {
-    "tmi.js": "^1.8.5"
+    "fs": "^0.0.1-security",
+    "tmi.js": "^1.8.5",
+    "toml": "^3.0.0"
   }
 }
