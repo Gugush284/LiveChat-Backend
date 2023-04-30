@@ -18,5 +18,8 @@
   "bugs": {
     "url": "https://github.com/Gugush284/LiveChat-Backend/issues"
   },
-  "homepage": "https://github.com/Gugush284/LiveChat-Backend#readme"
+  "homepage": "https://github.com/Gugush284/LiveChat-Backend#readme",
+  "dependencies": {
+    "tmi.js": "^1.8.5"
+  }
 }
